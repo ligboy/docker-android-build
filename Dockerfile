@@ -1,8 +1,7 @@
 FROM ubuntu:12.04
 
 MAINTAINER Ligboy Liu "ligboy@gmail.com"
-RUN dpkg --add-architecture i386 && \
-        apt-get update -qq
+RUN apt-get update -qq
 # Base Dependencies
 RUN apt-get install -y python-software-properties wget python
 
