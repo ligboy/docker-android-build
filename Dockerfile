@@ -11,6 +11,7 @@ RUN echo oracle-java6-installer shared/accepted-oracle-license-v1-1 select true 
 RUN apt-get install -y oracle-java6-installer
 
 # Building Required Packages
+RUN apt-get build-dep -y build-essential
 RUN apt-get install -y git gnupg flex bison gperf build-essential \
                          zip curl libc6-dev libncurses5-dev:i386 x11proto-core-dev \
                          libx11-dev:i386 libreadline6-dev:i386 libgl1-mesa-glx:i386 \
