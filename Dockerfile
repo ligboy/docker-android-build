@@ -2,8 +2,7 @@ FROM ubuntu:12.04
 
 MAINTAINER Ligboy Liu "ligboy@gmail.com"
 
-RUN dpkg --add-architecture i386 && \
-        apt-get update -qq
+RUN apt-get update -qq
 # Base Dependencies
 RUN apt-get install -y wget python
 
@@ -11,6 +10,7 @@ RUN apt-get install -y wget python
 RUN apt-get install -y openjdk-7-jdk
 
 # Building Required Packages
+RUN apt-get build-dep -y build-essential
 RUN apt-get install -y git gnupg flex bison gperf build-essential \
                          zip curl libc6-dev libncurses5-dev:i386 x11proto-core-dev \
                          libx11-dev:i386 libreadline6-dev:i386 libgl1-mesa-glx:i386 \
