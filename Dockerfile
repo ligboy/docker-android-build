@@ -21,7 +21,7 @@ RUN apt-get install -y git gnupg flex bison gperf build-essential \
 RUN ln -s /usr/lib/i386-linux-gnu/mesa/libGL.so.1 /usr/lib/i386-linux-gnu/libGL.so
 
 # Configuring USB Access
-RUN wget -S -O - http://source.android.com/source/51-android.rules | sed "s/<username>/$USER/" | tee >/dev/null /etc/udev/rules.d/51-android.rules; udevadm control --reload-rules
+#RUN wget -S -O - http://source.android.com/source/51-android.rules | sed "s/<username>/$USER/" | tee >/dev/null /etc/udev/rules.d/51-android.rules; udevadm control --reload-rules
 
 # Install repo tool
 RUN mkdir /opt/tools
