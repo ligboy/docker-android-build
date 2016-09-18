@@ -26,7 +26,7 @@ RUN apt-get install -y git-core gnupg flex bison gperf build-essential \
 RUN apt-get install -y python-networkx libnss-sss:i386
 
 # Configuring USB Access
-RUN wget -S -O - http://source.android.com/source/51-android.rules | sed "s/<username>/$USER/" | tee >/dev/null /etc/udev/rules.d/51-android.rules; udevadm control --reload-rules
+#RUN wget -S -O - http://source.android.com/source/51-android.rules | sed "s/<username>/$USER/" | tee >/dev/null /etc/udev/rules.d/51-android.rules; udevadm control --reload-rules
 
 # Install repo tool
 RUN mkdir /opt/tools
