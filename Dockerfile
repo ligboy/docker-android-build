@@ -2,6 +2,9 @@ FROM ubuntu:14.04
 
 MAINTAINER Ligboy Liu "ligboy@gmail.com"
 
+USER root
+ENV USER root
+
 RUN dpkg --add-architecture i386 && \
         apt-get update -qq
 # Base Dependencies
