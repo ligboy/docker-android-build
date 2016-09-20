@@ -21,7 +21,7 @@ RUN apt-get install -y git-core gnupg flex bison gperf build-essential \
 
 RUN apt-get install -y python-networkx libnss-sss:i386
 
-ENV JACK_SERVER_VM_ARGUMENTS "-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4g"
+ENV ANDROID_JACK_VM_ARGS "-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4g"
 
 # Configuring USB Access
 #RUN wget -S -O - http://source.android.com/source/51-android.rules | sed "s/<username>/$USER/" | tee >/dev/null /etc/udev/rules.d/51-android.rules; udevadm control --reload-rules
